@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 
 namespace HelloWorld
 {
@@ -6,7 +7,8 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Heelo World");
+            string name = ConfigurationManager.AppSettings["name"];
+            Console.WriteLine("Hello, " + name);
             Console.ReadKey();
         }
     }
